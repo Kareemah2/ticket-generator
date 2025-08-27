@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confrence Ticket Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-img">
+      <img
+        src="./assets/images/pattern-circle.svg"
+        alt="Logo"
+        class="circle-bg"
+      />
+      <img
+        src="./assets/images/pattern-circle.svg"
+        alt=""
+        class="circle-bottom-right"
+      />
+      <img
+        src="./assets/images/pattern-lines.svg"
+        alt="Lines.bg"
+        class="lines-bg"
+      />
+      <img
+        src="./assets/images/pattern-squiggly-line-top.svg"
+        alt="Lines.bg"
+        class="squiggly-bg"
+      />
+    </div>
+    <div class="container">
+      <div class="header">
+        <div class="logo">
+          <img src="./assets/images/logo-full.svg" alt="Logo" />
+        </div>
+        <div class="head-text">
+          <h2>
+            Your Journey to Coding Conf
+            <p>2025 Starts Here!</p>
+          </h2>
+        </div>
+        <div class="text2">
+          <p>Secure your spot at next year's biggest coding confrence.</p>
+        </div>
+      </div>
+      <div class="form-container">
+        <form action="">
+          <div class="img-input">
+            <p class="p">Upload Avatar</p>
+            <label class="upload-box" for="fileInput" tabindex="0">
+              <img
+                src="./assets/images/icon-upload.svg"
+                alt="Upload Icon"
+                class="upload-img"
+              />
+              <div id="preview-text">Drag & drop or click to upload</div>
+              <img id="preview" style="display: none" />
+            </label>
+            <input
+              type="file"
+              id="fileInput"
+              accept="image/png, image/jpeg"
+              aria-describedby="avatarHint avatarError"
+              required
+            />
+            <small id="avatarHint">
+              File too large. Please upload a JPG/PNG under 500KB.</small
+            >
+            <span id="avatarError" class="error" aria-live="polite"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="" />
+
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@gmail.com"
+              aria-describedby="emailError"
+              required
+            />
+            <span id="emailError" class="error" aria-live="polite"></span>
+
+            <label for="name">GitHub Username</label>
+            <input
+              type="text"
+              id="username"
+              name="name"
+              placeholder="@yourusername"
+            />
+          </div>
+
+          <button type="submit" class="contact-button">
+            Generate My Ticket
+          </button>
+        </form>
+      </div>
+    </div>
+    <img
+      src="./assets/images/pattern-squiggly-line-bottom-desktop.svg"
+      alt="Lines.bg"
+      class="squiggly-bg-bottom"
+    />
+  </body>
+</html>
