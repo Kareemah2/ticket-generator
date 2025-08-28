@@ -29,7 +29,7 @@
         class="squiggly-bg"
       />
     </div>
-    <div class="container">
+    <div class="container" style="display: none" id="form-container">
       <div class="header">
         <div class="logo">
           <img src="./assets/images/logo-full.svg" alt="Logo" />
@@ -45,7 +45,7 @@
         </div>
       </div>
       <div class="form-container">
-        <form action="">
+        <form id="ticket-form">
           <div class="img-input">
             <p class="p">Upload Avatar</p>
             <label class="upload-box" for="fileInput" tabindex="0">
@@ -64,10 +64,18 @@
               aria-describedby="avatarHint avatarError"
               required
             />
-            <small id="avatarHint">
-              File too large. Please upload a JPG/PNG under 500KB.</small
-            >
-            <span id="avatarError" class="error" aria-live="polite"></span>
+            <div id="file-actions" class="file-actions">
+              <button type="button" id="removeButton" style="display: none">
+                Remove image
+              </button>
+              <button type="button" id="changeButton" style="display: none">
+                Change image
+              </button>
+              <p class="text-hint">
+                <img src="assets/images/icon-info.svg" alt="" srcset="" />File
+                too large. Please upload a photo under 500KB.
+              </p>
+            </div>
           </div>
 
           <div class="form-group">
@@ -83,7 +91,10 @@
               aria-describedby="emailError"
               required
             />
-            <span id="emailError" class="error" aria-live="polite"></span>
+            <p class="text-hint">
+              <img src="assets/images/icon-info.svg" alt="" srcset="" />Please
+              enter a valid image address .
+            </p>
 
             <label for="name">GitHub Username</label>
             <input
@@ -105,5 +116,39 @@
       alt="Lines.bg"
       class="squiggly-bg-bottom"
     />
+
+    <div id="display-data" class="display-data" style="display: block">
+      <img class="logo" src="assets/images/logo-full.svg" alt="" srcset="" />
+
+      <div class="headings">
+        <h1>
+          Congrats, <span id="header-name" class="gradiant-text"></span>! Your
+          Ticket is ready.
+        </h1>
+        <p>
+          We've emailed your ticket to
+          <span id="display-email" class="header-email"></span> and will send
+          updates in the run up to the event.
+        </p>
+      </div>
+
+      <div class="ticket-container">
+        <div class="logo1">
+          <img src="assets/images/logo-mark.svg" alt="" />
+          Coding Conf
+        </div>
+        <p class="date">Jan 31, 2025 / Austin, TX</p>
+        <div class="ticket-user">
+          <img id="ticket-avatar" src="" alt="User Avatar" />
+          <div class="user-info">
+            <span id="display-name"></span>
+            <div class="github-username">
+              <img src="assets/images/icon-github.svg" alt="" />
+              <span id="display-github"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

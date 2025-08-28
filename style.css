@@ -3,15 +3,23 @@
   padding: 0;
   box-sizing: border-box;
 }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
+html,
 body {
   background-image: url("/assets/images/background-desktop.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-bottom: 0px;
+  padding-bottom: 24px;
   font-family: monospace;
   color: #ffffff;
+  width: 100vw;
+  overflow: hidden;
 }
 
 .bg-img {
@@ -25,29 +33,26 @@ body {
   display: block;
   align-items: flex-start;
   position: absolute;
-  top: -100px; /* push partly off-screen */
-  left: 50px;
-  width: 250px;
+  top: -10%;
+  left: 2%;
+  width: 10%;
   z-index: 0;
 }
 
 .circle-bottom-right {
   position: absolute;
-  width: 13%;
-  bottom: 45px;
-  right: 325px;
-  opacity: 0.5;
+  width: 10%;
+  bottom: 30%;
+  right: 28%;
   z-index: 0;
 }
 
 .lines-bg {
   position: absolute;
   top: 0;
-  left: 50%;
-  width: auto;
+  left: 0;
+  width: 100%;
   height: 145%;
-
-  transform: translateX(-50%); /* keeps them centered */
   z-index: 0;
 }
 
@@ -62,10 +67,9 @@ body {
 }
 .squiggly-bg-bottom {
   position: absolute;
-  background: cover;
-  top: 72%;
-  left: 30%;
-  width: 65%;
+  top: 46%;
+  left: 24%;
+  width: 50%;
   transform: translateX(-50%);
   z-index: 0;
 }
@@ -85,6 +89,7 @@ body {
   align-items: center;
   margin-top: 2rem;
   margin-bottom: 0;
+  height: 100%;
 }
 
 .header {
@@ -92,21 +97,21 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   text-align: center;
 }
 
 .logo {
-  margin-bottom: 1rem;
+  width: 25%;
 }
 
 .head-text {
   font-family: monospace;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .head-text p {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .text2 {
@@ -123,7 +128,7 @@ body {
 
 p {
   font-family: monospace;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .upload-box img {
@@ -137,7 +142,7 @@ p {
   /* border: black solid 1px; */
   padding: 5px;
   background: rgba(255, 255, 255, 0.05);
-  width: 40px;
+  width: 35px;
   margin-bottom: 10px;
 }
 
@@ -145,8 +150,8 @@ p {
   position: relative;
   border: 2px dashed #504d6c;
   border-radius: 12px;
-  width: 370px;
-  height: 120px;
+  width: 120%;
+  height: 90px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -157,8 +162,8 @@ p {
 }
 
 .p {
-  font-size: 16px;
-  padding-bottom: 10px;
+  font-size: 12px;
+  padding-bottom: 8px;
 }
 
 .upload-box:hover {
@@ -177,6 +182,24 @@ input[type="file"] {
   display: none;
 }
 
+.form-actions {
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+#file-actions button {
+  background: #1c163c;
+  color: #908fa1;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 7px;
+  font-family: monospace;
+  font-size: 12px;
+}
+
 #name:hover {
   cursor: pointer;
   background: #393556;
@@ -193,7 +216,7 @@ form {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  gap: 50px;
+  gap: 15px;
 }
 
 #preview {
@@ -210,6 +233,16 @@ form {
   /* padding-top: 5px; */
 }
 
+.text-hint {
+  font-family: monospace;
+  color: #f67464;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 2px;
+}
+
 .form-group {
   flex: 1;
   display: flex;
@@ -222,30 +255,29 @@ form {
   border-radius: 7px;
   padding: 10px;
   background: #1c163c;
-  width: 370px;
+  width: 160%;
   border: 1px solid #504d6c;
   font-family: monospace;
 }
 
 .form-group label {
-  border: 1px black solid;
   font-family: monospace;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .error {
   color: #ff5c5c;
-  border: #393556 solid 1px;
   font-size: 14px;
   margin-top: 4px;
   display: block;
 }
+
 input:invalid {
   border-color: #ff5c5c;
 }
 
 .contact-button {
-  width: 100%;
+  width: 96%;
   background: #f67464;
   color: #150826;
   border-radius: 10px;
@@ -253,7 +285,6 @@ input:invalid {
   font-size: 12px;
   font-family: monospace;
   font-weight: bold;
-  margin-top: -35px;
 }
 
 .contact-button:hover {
@@ -265,4 +296,105 @@ input:invalid {
   outline: none;
   border: 3px solid #f67464;
   box-shadow: 0 0 0 3px rgba(246, 116, 100, 0.5);
+}
+
+.display-data {
+  width: 90%;
+  max-width: 800px;
+  padding: 1rem;
+  margin: auto;
+  position: relative;
+  z-index: 20;
+}
+
+.display-data .logo {
+  margin: 0 auto 2rem auto;
+}
+.display-data .logo1 {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.display-data .headings {
+  margin-bottom: 6rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+.display-data .headings p {
+  padding: 0 7.5rem;
+}
+
+.display-data .ticket-container {
+  background: url(assets/images/pattern-ticket.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  aspect-ratio: 16 / 9;
+  max-width: 500px;
+  padding: 1rem;
+  margin: auto;
+  position: relative;
+}
+
+.display-data .ticket-container.logo {
+  margin-bottom: 5rem;
+  font-size: 2.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.display-data .ticket-container .date {
+  color: #908fa1;
+  padding-left: 5.5rem;
+  margin-bottom: 4rem;
+  font-size: 14px;
+}
+
+.display-data .ticket-container .ticket-user {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.display-data .ticket-container .ticket-user img {
+  width: 65px;
+  border-radius: 0.75rem;
+}
+
+.display-data .ticket-container .ticket-user #display-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.display-data .ticket-container .ticket-user .github-username {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.display-data .ticket-container .ticket-user .github-username img {
+  width: 20px;
+}
+
+.display-data
+  .ticket-container
+  .ticket-user
+  .github-username
+  #display-username {
+  font-size: 1.75rem;
+  color: #908fa1;
+  position: absolute;
+  right: 5px;
+  top: 36%;
+  transform: rotate(90deg);
 }
