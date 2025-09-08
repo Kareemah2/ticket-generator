@@ -2,37 +2,45 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
     <title>Confrence Ticket Generator</title>
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="style.css" />
+    <script
+      defer
+      src="script.js"></script>
   </head>
   <body>
     <div class="bg-img">
       <img
         src="./assets/images/pattern-circle.svg"
         alt="Logo"
-        class="circle-bg"
-      />
+        class="circle-bg" />
       <img
         src="./assets/images/pattern-circle.svg"
         alt=""
-        class="circle-bottom-right"
-      />
+        class="circle-bottom-right" />
       <img
         src="./assets/images/pattern-lines.svg"
         alt="Lines.bg"
-        class="lines-bg"
-      />
+        class="lines-bg" />
       <img
         src="./assets/images/pattern-squiggly-line-top.svg"
         alt="Lines.bg"
-        class="squiggly-bg"
-      />
+        class="squiggly-bg" />
     </div>
-    <div class="container" style="display: none" id="form-container">
+    <div
+      class="container"
+      id="form-container"
+      style="display: block">
       <div class="header">
         <div class="logo">
-          <img src="./assets/images/logo-full.svg" alt="Logo" />
+          <img
+            src="./assets/images/logo-full.svg"
+            alt="Logo" />
         </div>
         <div class="head-text">
           <h2>
@@ -48,52 +56,67 @@
         <form id="ticket-form">
           <div class="img-input">
             <p class="p">Upload Avatar</p>
-            <label class="upload-box" for="fileInput" tabindex="0">
+            <label
+              class="upload-box"
+              for="fileInput"
+              tabindex="0">
               <img
                 src="./assets/images/icon-upload.svg"
                 alt="Upload Icon"
-                class="upload-img"
-              />
+                class="upload-img" />
               <div id="preview-text">Drag & drop or click to upload</div>
-              <img id="preview" style="display: none" />
+              <img
+                id="preview"
+                style="display: none" />
             </label>
             <input
               type="file"
               id="fileInput"
               accept="image/png, image/jpeg"
               aria-describedby="avatarHint avatarError"
-              required
-            />
-            <div id="file-actions" class="file-actions">
-              <button type="button" id="removeButton" style="display: none">
+              required />
+            <div
+              id="file-actions"
+              class="file-actions">
+              <button
+                type="button"
+                id="removeButton"
+                style="display: none">
                 Remove image
               </button>
-              <button type="button" id="changeButton" style="display: none">
+              <button
+                type="button"
+                id="changeButton"
+                style="display: none">
                 Change image
               </button>
               <p class="text-hint">
-                <img src="assets/images/icon-info.svg" alt="" srcset="" />File
-                too large. Please upload a photo under 500KB.
+                <img
+                  src="assets/images/icon-info.svg"
+                  alt=""
+                  srcset="" />File too large. Please upload a photo under 500KB.
               </p>
             </div>
           </div>
 
           <div class="form-group">
             <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="" />
+            <input
+              type="text"
+              id="name"
+              name="name" />
 
             <label for="email">Email Address</label>
             <input
               type="email"
               id="email"
               name="email"
-              placeholder="example@gmail.com"
-              aria-describedby="emailError"
-              required
-            />
+              placeholder="example@gmail.com" />
             <p class="text-hint">
-              <img src="assets/images/icon-info.svg" alt="" srcset="" />Please
-              enter a valid image address .
+              <img
+                src="assets/images/icon-info.svg"
+                alt=""
+                srcset="" />
             </p>
 
             <label for="name">GitHub Username</label>
@@ -101,11 +124,12 @@
               type="text"
               id="username"
               name="name"
-              placeholder="@yourusername"
-            />
+              placeholder="@yourusername" />
           </div>
 
-          <button type="submit" class="contact-button">
+          <button
+            type="submit"
+            class="contact-button">
             Generate My Ticket
           </button>
         </form>
@@ -114,37 +138,67 @@
     <img
       src="./assets/images/pattern-squiggly-line-bottom-desktop.svg"
       alt="Lines.bg"
-      class="squiggly-bg-bottom"
-    />
+      class="squiggly-bg-bottom" />
+    <!-- <img
+      src="assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"
+      alt=""
+      class="mobile-bg" /> -->
 
-    <div id="display-data" class="display-data" style="display: block">
-      <img class="logo" src="assets/images/logo-full.svg" alt="" srcset="" />
-
+    <div
+      id="display-data"
+      class="display-data"
+      style="display: none">
       <div class="headings">
-        <h1>
-          Congrats, <span id="header-name" class="gradiant-text"></span>! Your
-          Ticket is ready.
-        </h1>
-        <p>
-          We've emailed your ticket to
-          <span id="display-email" class="header-email"></span> and will send
-          updates in the run up to the event.
-        </p>
+        <img
+          class="logo-full"
+          src="assets/images/logo-full.svg"
+          alt=""
+          srcset="" />
+        <div class="head">
+          <h1>
+            Congrats,
+            <span
+              id="header-name"
+              class="gradiant-text"
+              >Jonathan Kristof !</span
+            ><br />
+            Your Ticket is ready.
+          </h1>
+        </div>
+        <div class="email-message">
+          <p>
+            We've emailed your ticket to <br />
+            <span
+              id="display-email"
+              class="header-email">
+              example@gmail.com</span
+            >
+            and will send updates in <br />
+            the run up to the event.
+          </p>
+        </div>
       </div>
 
       <div class="ticket-container">
         <div class="logo1">
-          <img src="assets/images/logo-mark.svg" alt="" />
+          <img
+            src="assets/images/logo-mark.svg"
+            alt="" />
           Coding Conf
         </div>
         <p class="date">Jan 31, 2025 / Austin, TX</p>
         <div class="ticket-user">
-          <img id="ticket-avatar" src="" alt="User Avatar" />
+          <img
+            id="ticket-avatar"
+            src="assets/images/image-avatar.jpg"
+            alt="User Avatar" />
           <div class="user-info">
-            <span id="display-name"></span>
+            <span id="display-name">Jonathan Kristof</span>
             <div class="github-username">
-              <img src="assets/images/icon-github.svg" alt="" />
-              <span id="display-github"></span>
+              <img
+                src="assets/images/icon-github.svg"
+                alt="" />
+              <span id="display-github">@jonathankristof1010</span>
             </div>
           </div>
         </div>
