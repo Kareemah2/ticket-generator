@@ -8,16 +8,43 @@ img {
   height: auto;
 }
 
+.info-icon {
+  width: 12px;
+  height: 12px;
+}
+
+.error-ms {
+  visibility: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  margin-top: 2px;
+}
+
+.form-group.success input {
+  border-color: #241a4d;
+}
+.form-group.error input {
+  border-color: #ff5c5c;
+}
+.form-group.error .error-ms {
+  visibility: visible;
+  color: #ff5c5c;
+  font-size: 12px;
+}
+
 html,
 body {
   background-image: url('/assets/images/background-desktop.png');
-  /* background-size: cover; */
+  background-size: auto;
   background-position: center;
   background-repeat: no-repeat;
   padding-bottom: 24px;
   font-family: monospace;
   color: #ffffff;
   overflow: hidden;
+  margin-left: 10px;
 }
 
 .bg-img {
@@ -142,7 +169,7 @@ p {
   border: 2px dashed #504d6c;
   border-radius: 12px;
   width: 100%;
-  height: 70px;
+  height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -185,10 +212,10 @@ input[type='file'] {
   background: #1c163c;
   color: #908fa1;
   border: none;
-  padding: 8px 12px;
+  padding: 5px 2px;
   border-radius: 7px;
   font-family: monospace;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 #name:hover {
@@ -207,12 +234,12 @@ form {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 10px;
+  /* gap: 10px; */
 }
 
 #preview {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 60%;
   border-radius: 8px;
   object-fit: cover; /* makes it fill nicely */
 }
@@ -256,8 +283,8 @@ form {
   font-size: 12px;
 }
 
-.error {
-  color: #ff5c5c;
+/* .error {
+  border-color: #ff5c5c;
   font-size: 14px;
   margin-top: 4px;
   display: block;
@@ -265,7 +292,7 @@ form {
 
 input:invalid {
   border-color: #ff5c5c;
-}
+} */
 
 .contact-button {
   width: 100%;
@@ -409,6 +436,17 @@ input:invalid {
   width: 20px;
 }
 
+.ticket-id {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 2rem;
+  color: #908fa1;
+  position: absolute;
+  right: 25px;
+  top: 10%;
+  letter-spacing: 2px;
+}
+
 .display-data
   .ticket-container
   .ticket-user
@@ -468,6 +506,11 @@ input:invalid {
     top: 54%;
     left: 25%;
     width: 50%;
+  }
+
+  .upload-box {
+    height: 60px;
+    width: 23rem;
   }
 
   .lines-bg {
@@ -648,5 +691,16 @@ input:invalid {
   }
   .display-data .ticket-container .ticket-user .github-username {
     gap: 0.25rem;
+  }
+
+  .ticket-id {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 10px;
+    color: #908fa1;
+    position: absolute;
+    right: 20px;
+    top: 20%;
+    letter-spacing: 2px;
   }
 }
